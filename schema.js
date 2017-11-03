@@ -3,7 +3,8 @@ const {
     GraphQLSchema,
     GraphQLObjectType,
     GraphQLInt,
-    GraphQLString
+    GraphQLString,
+    GraphQLList
 } = require('graphql')
 
 // cd circle id 19837
@@ -14,8 +15,67 @@ fetch(
     headers: { 'Content-Type': 'application/json',
     'x-auth-token': '0c0176196d5fba82d7aed22167495d3c9d4d20c9' },
 })
+
 .then(res => res.json())
 .then(json => console.log(json));
+
+const rolesType = new GraphQLObjectType({
+    name: 'Roles',
+    description: '...',
+
+    fields: () => ({
+        id: {
+            type: GraphQLString,
+            resolve: json => 
+            console.log(json)
+        },
+        name: {
+            type: GraphQLString,
+
+        },
+        purpose: {
+            type: GraphQLString,
+
+        },
+        elected_until: {
+            type: GraphQLString,
+
+        },
+        organization_id: {
+            type: GraphQLInt,
+        },
+        accountabilities: {
+            type: GraphQLString,
+        }
+    })
+})
+
+
+const peopleType = new GraphQLObjectType({
+    name: 'Person',
+    description: '...',
+
+    fields: () => ({
+        id: {
+            type: GraphQLString,
+            resolve: json => json.circles[0].id
+        },
+        name: {
+            type: GraphQLString,
+            resolve: json => json.circles[0].name
+        },
+        email: {
+            type: GraphQLString,
+            resolve: json => json.circles[0].email
+        },
+        external_id: {
+            type: GraphQLString,
+            resolve: json => json.circles[0].external_id
+        }
+    })
+})
+
+
 
 const circleType = new GraphQLObjectType({
     name: 'Circle',
@@ -37,6 +97,13 @@ const circleType = new GraphQLObjectType({
         strategy: {
             type: GraphQLString,
             resolve: json => json.circles[0].strategy
+        },
+        roles: {
+            type: new GraphQLList(rolesType),
+            resolve: json => {
+                console.log(json.linked.roles)
+                console.log( json.circles[0].links.roles)
+            }
         }
     })
 })
