@@ -1,0 +1,24 @@
+{
+  "name": "graphqlwrapperglassfrog",
+  "version": "1.0.0",
+  "description": "GraphQl Wrapper for GlassFrog",
+  "main": "serve.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/speedgoofy/GraphQLWrapperGlassFrog.git"
+  },
+  "author": "Brandon Mixon",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11"
+  },
+  "bugs": {
+    "url": "https://github.com/speedgoofy/GraphQLWrapperGlassFrog/issues"
+  },
+  "homepage": "https://github.com/speedgoofy/GraphQLWrapperGlassFrog#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
