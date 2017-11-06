@@ -20,10 +20,6 @@ export default {
                 headers: { 'Content-Type': 'application/json',
                             'x-auth-token': '0c0176196d5fba82d7aed22167495d3c9d4d20c9' },
         }).then(res => res.json())
-        .then(json => {
-            console.log(json.circles);
-            return json.circles;
-        }
-    )
+          .then(json => json.circles)
     }
 }
