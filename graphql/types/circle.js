@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 import {
     GraphQLSchema,
     GraphQLObjectType,
@@ -7,7 +9,7 @@ import {
 } from 'graphql';
 
 import { peopleType } from './people'
-const fetch = require('node-fetch');
+import { roleType } from './role'
 
 export const circleType = new GraphQLObjectType({
     name: 'Circle',
@@ -16,34 +18,31 @@ export const circleType = new GraphQLObjectType({
     fields: () => ({
         id: {
             type: GraphQLString,
-            resolve: json => json.id
+            resolve: json => json.circles[0].id
         },
         name: {
             type: GraphQLString,
-            resolve: json => json.name
+            resolve: json => json.circles[0].name
         },
         short_name: {
             type: GraphQLString,
-            resolve: json => json.short_name
+            resolve: json => json.circles[0].short_name
         },
         strategy: {
             type: GraphQLString,
-            resolve: json => json.strategy
+            resolve: json => json.circles[0].strategy
+        },
+        organization_id: {
+            type: GraphQLString,
+            resolve: json => json.circles[0].organization_id
         },
         people: {
             type: new GraphQLList(peopleType),
-            resolve: json => {
-                const ids = json.links.people
-
-                return Promise.all(ids.map(id => 
-                    fetch(
-                        `https://api.glassfrog.com/api/v3/people/${id}`, {
-                        headers: { 'Content-Type': 'application/json',
-                        'x-auth-token': '0c0176196d5fba82d7aed22167495d3c9d4d20c9' },
-                    })
-                    .then(res => res.json())
-                    .then(json => json.people[0])
-                ))}
-            }
-        })
+            resolve: json => json.linked.people
+        },
+        roles: {
+            type: new GraphQLList(peopleType),
+            resolve: json => json.linked.people
+        }
     })
+})

@@ -14,7 +14,6 @@ export default {
     type: new GraphQLList(circleType),
 
     resolve: async (root, args) => {
-
         return await fetch(
             `https://api.glassfrog.com/api/v3/circles/?include=members`, {
                 headers: { 'Content-Type': 'application/json',

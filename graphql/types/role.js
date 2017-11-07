@@ -14,6 +14,10 @@ export const roleType = new GraphQLObjectType({
             type: GraphQLString,
             resolve: json => json.id
         },
+        tag_names :{
+            type: GraphQLString,
+            resolve: json => json.tag_names
+        },
         name: {
             type: GraphQLString,
             resolve: json => json.name
