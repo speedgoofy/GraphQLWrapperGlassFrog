@@ -4,6 +4,8 @@ import {
     GraphQLList
 } from 'graphql'
 
+import { domainType } from './domain'
+
 
 export const roleType = new GraphQLObjectType({
     name: 'Role',
@@ -33,6 +35,10 @@ export const roleType = new GraphQLObjectType({
         organization_id: {
             type: GraphQLString,
             resolve: json => json.settings
+        },
+        domains : {
+            type: new GraphQLList(domainType),
+            resolve: json => json.domains
         }
     })
 })

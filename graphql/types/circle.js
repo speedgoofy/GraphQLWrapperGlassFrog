@@ -41,8 +41,8 @@ export const circleType = new GraphQLObjectType({
             resolve: json => json.linked.people
         },
         roles: {
-            type: new GraphQLList(peopleType),
-            resolve: json => json.linked.people
+            type: new GraphQLList(roleType),
+            resolve: json => json.linked.roles
         }
     })
 })

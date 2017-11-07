@@ -1,0 +1,386 @@
+{
+    "circles": [
+        {
+            "id": 19837,
+            "name": "CD Part II",
+            "short_name": "CD Part II",
+            "strategy": "Use External PM when the project has high risk & impact; required cross BU Visibility, Communication, and Coordination; subject to Time Criticality.\r\n",
+            "organization_id": 3595,
+            "links": {
+                "people": [
+                    32330,
+                    33582,
+                    33585,
+                    32914,
+                    33579
+                ],
+                "roles": [
+                    8883042,
+                    8883035,
+                    8954641,
+                    8883044,
+                    8883041,
+                    8954642
+                ],
+                "policies": [],
+                "domain": [
+                    9147334,
+                    9147335,
+                    9147336,
+                    9147337,
+                    9147338,
+                    9147339,
+                    9147340
+                ],
+                "supported_role": 8876805
+            }
+        }
+    ],
+    "linked": {
+        "people": [
+            {
+                "id": 32330,
+                "name": "Anna Wolbrecht",
+                "email": "awolbrecht@friedkin.com",
+                "external_id": null,
+                "settings": {
+                    "use_old_nav": false,
+                    "hide_nav_banner": true
+                },
+                "links": {
+                    "circles": [
+                        10893,
+                        20377,
+                        11210,
+                        10888,
+                        19837,
+                        10776,
+                        20149,
+                        10383,
+                        19832,
+                        14245,
+                        10889,
+                        10890,
+                        25128,
+                        19839,
+                        19834,
+                        14560,
+                        14868,
+                        10967,
+                        10638,
+                        16109,
+                        10887,
+                        10382
+                    ],
+                    "organization_ids": [
+                        3595
+                    ]
+                }
+            },
+            {
+                "id": 33582,
+                "name": "Brandon Mixon",
+                "email": "bmixon@friedkin.com",
+                "external_id": null,
+                "settings": {
+                    "use_old_nav": false,
+                    "hide_nav_banner": true
+                },
+                "links": {
+                    "circles": [
+                        14868,
+                        14560,
+                        10384,
+                        19833,
+                        10638,
+                        19837,
+                        20377,
+                        19834,
+                        11113,
+                        10383
+                    ],
+                    "organization_ids": [
+                        3595
+                    ]
+                }
+            },
+            {
+                "id": 33585,
+                "name": "Garret Dumoit",
+                "email": "gdumoit@friedkin.com",
+                "external_id": null,
+                "settings": {
+                    "use_old_nav": false,
+                    "hide_nav_banner": true
+                },
+                "links": {
+                    "circles": [
+                        19834,
+                        20325,
+                        10384,
+                        10383,
+                        10638,
+                        11001,
+                        10477,
+                        19837,
+                        14560,
+                        14868,
+                        25128,
+                        19839,
+                        11119
+                    ],
+                    "organization_ids": [
+                        3595
+                    ]
+                }
+            },
+            {
+                "id": 32914,
+                "name": "Jay Jaggard",
+                "email": "jjaggard@friedkin.com",
+                "external_id": null,
+                "settings": {
+                    "use_old_nav": false,
+                    "hide_nav_banner": true
+                },
+                "links": {
+                    "circles": [
+                        10638,
+                        19834,
+                        19832,
+                        10383,
+                        20149,
+                        20377,
+                        19837,
+                        10889,
+                        10890,
+                        10476,
+                        19840,
+                        11119,
+                        10384,
+                        10632,
+                        11054,
+                        19839,
+                        10893,
+                        10967
+                    ],
+                    "organization_ids": [
+                        3595
+                    ]
+                }
+            },
+            {
+                "id": 33579,
+                "name": "Lionel Jones",
+                "email": "ljones@friedkin.com",
+                "external_id": null,
+                "settings": {
+                    "use_old_nav": false,
+                    "hide_nav_banner": false
+                },
+                "links": {
+                    "circles": [
+                        20324,
+                        10384,
+                        10638,
+                        10383,
+                        19833,
+                        19837,
+                        11113,
+                        11119,
+                        10764
+                    ],
+                    "organization_ids": [
+                        3595
+                    ]
+                }
+            }
+        ],
+        "roles": [
+            {
+                "id": 8883042,
+                "name": "Facilitator",
+                "purpose": "Circle governance and operational practices aligned with the Constitution.",
+                "elected_until": null,
+                "organization_id": 3595,
+                "links": {
+                    "circle": 19837,
+                    "supporting_circle": null,
+                    "domains": [],
+                    "accountabilities": [
+                        9710005,
+                        9710006
+                    ],
+                    "people": []
+                }
+            },
+            {
+                "id": 8883035,
+                "name": "Lead Link",
+                "purpose": "Improving cont. delivery security scanning, implementing side by side deployment and implement the solution",
+                "organization_id": 3595,
+                "links": {
+                    "circle": 19837,
+                    "supporting_circle": null,
+                    "domains": [
+                        9140627
+                    ],
+                    "accountabilities": [
+                        9709991,
+                        9709992,
+                        9709993,
+                        9709994,
+                        9710000,
+                        9710001
+                    ],
+                    "people": [
+                        32914
+                    ]
+                }
+            },
+            {
+                "id": 8954641,
+                "name": "Quality Assurance",
+                "purpose": null,
+                "organization_id": 3595,
+                "links": {
+                    "circle": 19837,
+                    "supporting_circle": null,
+                    "domains": [],
+                    "accountabilities": [],
+                    "people": [
+                        33585
+                    ]
+                }
+            },
+            {
+                "id": 8883044,
+                "name": "Rep Link",
+                "purpose": "Within the Super-Circle, the Rep Link holds the Purpose of the Sub-Circle; within the Sub-Circle, the Rep Link’s Purpose is: Tensions relevant to process in the Super-Circle channeled out and resolved.",
+                "elected_until": "2017-07-24",
+                "organization_id": 3595,
+                "links": {
+                    "circle": 19837,
+                    "supporting_circle": null,
+                    "domains": [],
+                    "accountabilities": [
+                        9710007,
+                        9710008,
+                        9710009
+                    ],
+                    "people": [
+                        33579
+                    ]
+                }
+            },
+            {
+                "id": 8883041,
+                "name": "Secretary",
+                "purpose": "Steward and stabilize the Circle’s formal records and record-keeping process.",
+                "elected_until": "2018-01-22",
+                "organization_id": 3595,
+                "links": {
+                    "circle": 19837,
+                    "supporting_circle": null,
+                    "domains": [
+                        9140628
+                    ],
+                    "accountabilities": [
+                        9710002,
+                        9710003,
+                        9710004
+                    ],
+                    "people": [
+                        32914
+                    ]
+                }
+            },
+            {
+                "id": 8954642,
+                "name": "Software Engineer",
+                "purpose": null,
+                "organization_id": 3595,
+                "links": {
+                    "circle": 19837,
+                    "supporting_circle": null,
+                    "domains": [],
+                    "accountabilities": [],
+                    "people": [
+                        32914,
+                        33579,
+                        33582
+                    ]
+                }
+            }
+        ],
+        "policies": [],
+        "domains": [
+            {
+                "id": 9147334,
+                "description": "Project Analysis"
+            },
+            {
+                "id": 9147335,
+                "description": "Project Architecture"
+            },
+            {
+                "id": 9147336,
+                "description": "Project Code Repository"
+            },
+            {
+                "id": 9147337,
+                "description": "Project Design"
+            },
+            {
+                "id": 9147338,
+                "description": "Project Plan"
+            },
+            {
+                "id": 9147339,
+                "description": "Project Requisition (Purchase Order)"
+            },
+            {
+                "id": 9147340,
+                "description": "Project Training Materials"
+            }
+        ],
+        "supported_roles": [
+            {
+                "id": 8876805,
+                "name": "CD Part II",
+                "purpose": "Improving cont. delivery security scanning, implementing side by side deployment and implement the solution",
+                "organization_id": 3595,
+                "links": {
+                    "circle": 10383,
+                    "supporting_circle": 19837,
+                    "domains": [
+                        9147334,
+                        9147335,
+                        9147336,
+                        9147337,
+                        9147338,
+                        9147339,
+                        9147340
+                    ],
+                    "accountabilities": [
+                        9718045,
+                        9718046,
+                        9718047,
+                        9718048,
+                        9718049,
+                        9718060,
+                        9718061,
+                        9718062,
+                        9718063,
+                        9718064,
+                        9718065,
+                        9718066
+                    ],
+                    "people": [
+                        32914
+                    ]
+                }
+            }
+        ]
+    }
+}
