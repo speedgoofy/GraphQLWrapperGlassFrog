@@ -6,19 +6,14 @@ import {
     GraphQLList
 } from 'graphql'
 
+import { circlesType } from '../../types/circles';
 import { circleType } from '../../types/circle';
+import { fetchCircles }  from '../../fetch-functions/circles';
 
 const fetch = require('node-fetch');
 
 export default {
-    type: new GraphQLList(circleType),
+    type: new GraphQLList(circlesType),
 
-    resolve: async (root, args) => {
-        return await fetch(
-            `https://api.glassfrog.com/api/v3/circles/?include=members`, {
-                headers: { 'Content-Type': 'application/json',
-                            'x-auth-token': '0c0176196d5fba82d7aed22167495d3c9d4d20c9' },
-        }).then(res => res.json())
-          .then(json => json.circles)
-    }
+    resolve: async (root, args) =>  fetchCircles()
 }
