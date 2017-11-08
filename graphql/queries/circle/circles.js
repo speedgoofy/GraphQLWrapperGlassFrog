@@ -7,7 +7,6 @@ import {
 } from 'graphql'
 
 import { circlesType } from '../../types/circles';
-import { circleType } from '../../types/circle';
 import { fetchCircles }  from '../../fetch-functions/circles';
 
 const fetch = require('node-fetch');

@@ -8,18 +8,18 @@ import {
     GraphQLList
 } from 'graphql';
 
-import { peopleType } from './people'
-import { roleType } from './role'
+//import { peopleType } from './people'
+//import { roleType } from './role'
 
 export const circlesType = new GraphQLObjectType({
-    name: 'Circle',
+    name: 'Circles',
     description: '...',
 
     fields: () => ({
         id: {
             type: GraphQLString,
             resolve: json => {
-                console.log(json)
+                console.log("here")
             }
         },
         name: {
