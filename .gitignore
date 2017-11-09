@@ -60,3 +60,6 @@ typings/
 # glassfrog api key
 graphql/fetch-functions/ApiKey.js
 
+# dont check in test-responses
+test-responses/
+

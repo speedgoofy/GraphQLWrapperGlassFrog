@@ -12,10 +12,6 @@ import { roleType } from './role'
 import { fetchPeople } from '../fetch-functions/people';
 import { fetchRoles } from '../fetch-functions/roles';
 
-//import { ApiKey }  from '../fetch-functions/ApiKey';
-
-//const fetch = require('node-fetch');
-
 export const circlesType = new GraphQLObjectType({
     name: 'Circles',
     description: 'List circles for an organization',
