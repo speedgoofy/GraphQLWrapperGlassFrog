@@ -18,7 +18,7 @@ export const circlesType = new GraphQLObjectType({
     fields: () => ({
         id: {
             type: GraphQLString,
-            resolve: json => json.name
+            resolve: json => json.id
         },
         name: {
             type: GraphQLString,

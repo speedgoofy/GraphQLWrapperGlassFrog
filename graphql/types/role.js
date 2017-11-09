@@ -5,6 +5,11 @@ import {
 } from 'graphql'
 
 import { domainType } from './domain'
+import { accountabilitiesType } from './accountabilities'
+import { peopleType } from './people'
+import { fetchCircle } from '../fetch-functions/people'
+
+const fetch = require('node-fetch');
 
 
 export const roleType = new GraphQLObjectType({
@@ -26,19 +31,30 @@ export const roleType = new GraphQLObjectType({
         },
         purpose: {
             type: GraphQLString,
-            resolve: json => json.email
+            resolve: json => json.purpose
         },
         elected_until: {
             type: GraphQLString,
-            resolve: json => json.external_id
+            resolve: json => json.elected_until
         },
         organization_id: {
             type: GraphQLString,
-            resolve: json => json.settings
+            resolve: json => json.organization_id
         },
-        domains : {
-            type: new GraphQLList(domainType),
-            resolve: json => json.domains
-        }
+        // domains : {
+        //     type: new GraphQLList(domainType),
+        //     resolve: json => json.domains
+        // },
+        // accountabilities : {
+        //     type: new GraphQLList(accountabilitiesType),
+        //     resolve: json => json.domains
+        // },
+        people: {
+            type: new GraphQLList(peopleType),
+            resolve: async json => {
+                const ids = json.links.people
+                return Promise.all(ids.map(fetchCircle)
+            )}
+        },
     })
 })

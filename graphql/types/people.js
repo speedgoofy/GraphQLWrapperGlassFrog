@@ -14,7 +14,10 @@ export const peopleType = new GraphQLObjectType({
     fields: () => ({
         id: {
             type: GraphQLString,
-            resolve: json => json.id
+            resolve: json => {
+            console.log(json)
+             return json.id
+            }
         },
         name: {
             type: GraphQLString,
