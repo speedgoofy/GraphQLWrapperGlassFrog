@@ -15,7 +15,7 @@ export const peopleType = new GraphQLObjectType({
         id: {
             type: GraphQLString,
             resolve: json => {
-            //console.log(json)
+            //console.log('from people', json)
              return json.id
             }
         },

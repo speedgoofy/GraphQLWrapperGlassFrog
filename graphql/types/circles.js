@@ -1,5 +1,3 @@
-const fetch = require('node-fetch');
-
 import {
     GraphQLSchema,
     GraphQLObjectType,
@@ -8,8 +6,15 @@ import {
     GraphQLList
 } from 'graphql';
 
-//import { peopleType } from './people'
-//import { roleType } from './role'
+import { peopleType } from './people'
+import { roleType } from './role'
+
+import { fetchPeople } from '../fetch-functions/people';
+import { fetchRoles } from '../fetch-functions/roles';
+
+//import { ApiKey }  from '../fetch-functions/ApiKey';
+
+//const fetch = require('node-fetch');
 
 export const circlesType = new GraphQLObjectType({
     name: 'Circles',
@@ -36,35 +41,19 @@ export const circlesType = new GraphQLObjectType({
             type: GraphQLString,
             resolve: json => json.organization_id
         },
-        // people: {
-        //     type: new GraphQLList(peopleType),
-        //     resolve: json => {
-        //         const ids = json.links.people
-
-        //         return Promise.all(ids.map(id =>
-        //             fetch(
-        //                 `https://api.glassfrog.com/api/v3/people/${id}`, {
-        //                 headers: { 'Content-Type': 'application/json',
-        //                 'x-auth-token': '0c0176196d5fba82d7aed22167495d3c9d4d20c9' },
-        //             })
-        //             .then(res => res.json())
-        //             .then(json => json.people[0])
-        //         ))}
-        // },
-        // roles: {
-        //     type: new GraphQLList(peopleType),
-        //     resolve: json => {
-        //         const ids = json.links.roles
-
-        //         return Promise.all(ids.map(id =>
-        //             fetch(
-        //                 `https://api.glassfrog.com/api/v3/roles/${id}`, {
-        //                 headers: { 'Content-Type': 'application/json',
-        //                 'x-auth-token': '0c0176196d5fba82d7aed22167495d3c9d4d20c9' },
-        //             })
-        //             .then(res => res.json())
-        //             .then(json => json.roles[0])
-        //         ))}
-        // }
+        people: {
+            type: new GraphQLList(peopleType),
+            resolve: async json => {
+                const ids = json.links.people
+                return Promise.all(ids.map(fetchPeople)
+            )}
+        },
+        roles: {
+            type: new GraphQLList(roleType),
+            resolve: async json => {
+                const id = json.id
+                return Promise.resolve(fetchRoles(id))
+            }
+        },
     })
 })

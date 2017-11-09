@@ -19,7 +19,10 @@ export const roleType = new GraphQLObjectType({
     fields: () => ({
         id: {
             type: GraphQLString,
-            resolve: json => json.id
+            resolve: json => {
+                //console.log(json);
+                return json.id
+            }
         },
         tag_names :{
             type: GraphQLString,
@@ -55,6 +58,6 @@ export const roleType = new GraphQLObjectType({
                 const ids = json.links.people
                 return Promise.all(ids.map(fetchPeople)
             )}
-        },
+        }
     })
 })

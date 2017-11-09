@@ -3,6 +3,8 @@ import { ApiKey }  from './ApiKey';
 const fetch = require('node-fetch');
 
 export const fetchPeople = id => {
+
+    //console.log('in people')
     return fetch(
         `https://api.glassfrog.com/api/v3/people/${id}`, {
         headers: { 'Content-Type': 'application/json',
