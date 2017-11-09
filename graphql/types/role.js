@@ -7,7 +7,7 @@ import {
 import { domainType } from './domain'
 import { accountabilitiesType } from './accountabilities'
 import { peopleType } from './people'
-import { fetchCircle } from '../fetch-functions/people'
+import { fetchPeople } from '../fetch-functions/people'
 
 const fetch = require('node-fetch');
 
@@ -53,7 +53,7 @@ export const roleType = new GraphQLObjectType({
             type: new GraphQLList(peopleType),
             resolve: async json => {
                 const ids = json.links.people
-                return Promise.all(ids.map(fetchCircle)
+                return Promise.all(ids.map(fetchPeople)
             )}
         },
     })
