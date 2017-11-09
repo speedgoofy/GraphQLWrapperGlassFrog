@@ -4,17 +4,18 @@ import {
     GraphQLList
 } from 'graphql'
 
-import { domainType } from './domain'
-import { accountabilitiesType } from './accountabilities'
-import { peopleType } from './people'
-import { fetchPeople } from '../fetch-functions/people'
+import { domainType } from './domain';
+import { accountabilitiesType } from './accountabilities';
+import { peopleType } from './people';
+import { fetchPeople } from '../fetch-functions/people';
+import { fetchDomains } from '../fetch-functions/domains';
 
-const fetch = require('node-fetch');
+//const fetch = require('node-fetch');
 
 
 export const roleType = new GraphQLObjectType({
     name: 'Role',
-    description: '...',
+    description: 'Get the roles for a circle',
 
     fields: () => ({
         id: {
@@ -44,10 +45,16 @@ export const roleType = new GraphQLObjectType({
             type: GraphQLString,
             resolve: json => json.organization_id
         },
-        // domains : {
-        //     type: new GraphQLList(domainType),
-        //     resolve: json => json.domains
-        // },
+        domains : {
+            type: new GraphQLList(domainType),
+            resolve: json => {
+                const circleid = json.links.circle
+                const domainIds = json.links.domains
+                //console.log(circleid)
+
+                return Promise.resolve(fetchDomains(circleid, domainIds))
+            }
+        },
         // accountabilities : {
         //     type: new GraphQLList(accountabilitiesType),
         //     resolve: json => json.domains
