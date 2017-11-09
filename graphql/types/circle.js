@@ -8,12 +8,14 @@ import {
     GraphQLList
 } from 'graphql';
 
-import { peopleType } from './people'
-import { roleType } from './role'
+import { peopleType } from './people';
+import { roleType } from './role';
+import { domainType } from './domain';
+import { policyType } from './policy';
 
 export const circleType = new GraphQLObjectType({
     name: 'Circle',
-    description: '...',
+    description: 'Get a specific circle by circleID',
 
     fields: () => ({
         id: {
@@ -43,6 +45,14 @@ export const circleType = new GraphQLObjectType({
         roles: {
             type: new GraphQLList(roleType),
             resolve: json => json.linked.roles
+        },
+        domains: {
+            type: new GraphQLList(domainType),
+            resolve: json => json.linked.domains
+        },
+        policies: {
+            type: new GraphQLList(policyType),
+            resolve: json => json.linked.policies
         }
     })
 })

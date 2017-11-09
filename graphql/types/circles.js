@@ -13,7 +13,7 @@ import {
 
 export const circlesType = new GraphQLObjectType({
     name: 'Circles',
-    description: '...',
+    description: 'List circles for an organization',
 
     fields: () => ({
         id: {

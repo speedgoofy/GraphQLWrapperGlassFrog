@@ -1,38 +1,49 @@
 {
     "circles": [
         {
-            "id": 19837,
-            "name": "CD Part II",
-            "short_name": "CD Part II",
-            "strategy": "Use External PM when the project has high risk & impact; required cross BU Visibility, Communication, and Coordination; subject to Time Criticality.\r\n",
+            "id": 14868,
+            "name": "Hackathon Event",
+            "short_name": "Hackathon Event",
+            "strategy": null,
             "organization_id": 3595,
             "links": {
                 "people": [
                     32330,
                     33582,
                     33585,
-                    32914,
-                    33579
+                    33578,
+                    33008,
+                    33581,
+                    33534,
+                    33418,
+                    33528
                 ],
                 "roles": [
-                    8883042,
-                    8883035,
-                    8954641,
-                    8883044,
-                    8883041,
-                    8954642
+                    9526389,
+                    9526398,
+                    9526385,
+                    9526387,
+                    9526396,
+                    8409474,
+                    9526388,
+                    8409472,
+                    9526397,
+                    9526395,
+                    8409476,
+                    9526386,
+                    8409473
                 ],
-                "policies": [],
+                "policies": [
+                    8589531,
+                    8199799
+                ],
                 "domain": [
-                    9147334,
-                    9147335,
-                    9147336,
-                    9147337,
-                    9147338,
-                    9147339,
-                    9147340
+                    8609861,
+                    8609858,
+                    8609860,
+                    8609859
                 ],
-                "supported_role": 8876805
+                "supported_role": 8409457
             }
         }
     ],
@@ -135,9 +146,9 @@
                 }
             },
             {
-                "id": 32914,
-                "name": "Jay Jaggard",
-                "email": "jjaggard@friedkin.com",
+                "id": 33578,
+                "name": "Mamata Kalbande",
+                "email": "mkalbande@friedkin.com",
                 "external_id": null,
                 "settings": {
                     "use_old_nav": false,
@@ -145,23 +156,24 @@
                 },
                 "links": {
                     "circles": [
+                        14244,
+                        10382,
+                        20324,
+                        20325,
+                        14560,
+                        14868,
+                        11001,
+                        10968,
+                        10970,
                         10638,
-                        19834,
-                        19832,
-                        10383,
-                        20149,
-                        20377,
-                        19837,
-                        10889,
+                        10888,
                         10890,
-                        10476,
-                        19840,
+                        10889,
+                        10735,
                         11119,
                         10384,
-                        10632,
-                        11054,
-                        19839,
-                        10893,
+                        10383,
+                        10385,
                         10967
                     ],
                     "organization_ids": [
@@ -170,25 +182,149 @@
                 }
             },
             {
-                "id": 33579,
-                "name": "Lionel Jones",
-                "email": "ljones@friedkin.com",
+                "id": 33008,
+                "name": "Moin Africawala",
+                "email": "mafricawala@friedkin.com",
                 "external_id": null,
                 "settings": {
-                    "use_old_nav": false,
-                    "hide_nav_banner": false
+                    "use_old_nav": true,
+                    "hide_nav_banner": true
                 },
                 "links": {
                     "circles": [
-                        20324,
+                        11052,
+                        14244,
+                        20325,
+                        14560,
+                        25008,
+                        14869,
+                        10608,
+                        11054,
+                        10735,
+                        14868,
+                        10889,
+                        19832,
+                        10379,
+                        19842,
+                        10774,
+                        10800,
+                        10776
+                    ],
+                    "organization_ids": [
+                        3595
+                    ]
+                }
+            },
+            {
+                "id": 33581,
+                "name": "Sangeetha Vasudevan",
+                "email": "svasudevan@friedkin.com",
+                "external_id": null,
+                "settings": {
+                    "use_old_nav": false,
+                    "hide_nav_banner": true
+                },
+                "links": {
+                    "circles": [
+                        14244,
                         10384,
-                        10638,
+                        10967,
+                        10385,
+                        14245,
+                        11054,
+                        14868,
+                        11001,
+                        25128,
+                        19839,
+                        10889,
+                        14560,
+                        20377,
+                        11050,
                         10383,
-                        19833,
-                        19837,
-                        11113,
-                        11119,
-                        10764
+                        10638,
+                        16109,
+                        11210,
+                        10776
+                    ],
+                    "organization_ids": [
+                        3595
+                    ]
+                }
+            },
+            {
+                "id": 33534,
+                "name": "Subra \"Venkata\" Rachakonda",
+                "email": "vrachakonda@friedkin.com",
+                "external_id": null,
+                "settings": {
+                    "use_old_nav": false,
+                    "hide_nav_banner": true
+                },
+                "links": {
+                    "circles": [
+                        10609,
+                        14868,
+                        14560
+                    ],
+                    "organization_ids": [
+                        3595
+                    ]
+                }
+            },
+            {
+                "id": 33418,
+                "name": "Suzy Weaver",
+                "email": "sweaver@friedkin.com",
+                "external_id": null,
+                "settings": {
+                    "use_old_nav": false,
+                    "hide_nav_banner": true
+                },
+                "links": {
+                    "circles": [
+                        14868,
+                        10776,
+                        10380,
+                        14560,
+                        25008,
+                        10918,
+                        10889,
+                        14245,
+                        20149,
+                        11056,
+                        11054,
+                        10967,
+                        10800,
+                        19842,
+                        10314,
+                        10382
+                    ],
+                    "organization_ids": [
+                        3595
+                    ]
+                }
+            },
+            {
+                "id": 33528,
+                "name": "Tara Burr",
+                "email": "tburr@friedkin.com",
+                "external_id": null,
+                "settings": {
+                    "use_old_nav": true,
+                    "hide_nav_banner": true
+                },
+                "links": {
+                    "circles": [
+                        14560,
+                        10380,
+                        10314,
+                        14868,
+                        10382,
+                        10918,
+                        14869,
+                        10889,
+                        11210,
+                        10776
                     ],
                     "organization_ids": [
                         3595
@@ -198,186 +334,318 @@
         ],
         "roles": [
             {
-                "id": 8883042,
+                "id": 9526389,
+                "name": "Branding & Design",
+                "purpose": "branding & design of Hackathon Event",
+                "organization_id": 3595,
+                "links": {
+                    "circle": 14868,
+                    "supporting_circle": null,
+                    "domains": [
+                        9862123
+                    ],
+                    "accountabilities": [
+                        10563878
+                    ],
+                    "people": [
+                        33582
+                    ]
+                }
+            },
+            {
+                "id": 9526398,
+                "name": "Budget Coordinator",
+                "purpose": "ensure all components remain within budget",
+                "organization_id": 3595,
+                "links": {
+                    "circle": 14868,
+                    "supporting_circle": null,
+                    "domains": [
+                        9862136
+                    ],
+                    "accountabilities": [
+                        10563896
+                    ],
+                    "people": [
+                        33418
+                    ]
+                }
+            },
+            {
+                "id": 9526385,
+                "name": "Communications & Scheduling",
+                "purpose": "Communications & Scheduling for Hackathon",
+                "organization_id": 3595,
+                "links": {
+                    "circle": 14868,
+                    "supporting_circle": null,
+                    "domains": [
+                        9862110
+                    ],
+                    "accountabilities": [
+                        10563865
+                    ],
+                    "people": [
+                        33528
+                    ]
+                }
+            },
+            {
+                "id": 9526387,
+                "name": "Engagement & Recruiting",
+                "purpose": "engage folks to contribute to Hackathon",
+                "organization_id": 3595,
+                "links": {
+                    "circle": 14868,
+                    "supporting_circle": null,
+                    "domains": [
+                        9862114
+                    ],
+                    "accountabilities": [
+                        10563869
+                    ],
+                    "people": [
+                        33578
+                    ]
+                }
+            },
+            {
+                "id": 9526396,
+                "name": "Event Infrastructure",
+                "purpose": "db & app space",
+                "organization_id": 3595,
+                "links": {
+                    "circle": 14868,
+                    "supporting_circle": null,
+                    "domains": [
+                        9862127
+                    ],
+                    "accountabilities": [
+                        10563882
+                    ],
+                    "people": [
+                        33008
+                    ]
+                }
+            },
+            {
+                "id": 8409474,
                 "name": "Facilitator",
                 "purpose": "Circle governance and operational practices aligned with the Constitution.",
                 "elected_until": null,
                 "organization_id": 3595,
                 "links": {
-                    "circle": 19837,
+                    "circle": 14868,
                     "supporting_circle": null,
                     "domains": [],
                     "accountabilities": [
-                        9710005,
-                        9710006
+                        9079558,
+                        9079559
                     ],
                     "people": []
                 }
             },
             {
-                "id": 8883035,
-                "name": "Lead Link",
-                "purpose": "Improving cont. delivery security scanning, implementing side by side deployment and implement the solution",
+                "id": 9526388,
+                "name": "Hospitality",
+                "purpose": "hospitality for Hackathon",
                 "organization_id": 3595,
                 "links": {
-                    "circle": 19837,
+                    "circle": 14868,
                     "supporting_circle": null,
                     "domains": [
-                        9140627
+                        9862121
                     ],
                     "accountabilities": [
-                        9709991,
-                        9709992,
-                        9709993,
-                        9709994,
-                        9710000,
-                        9710001
+                        10563876
                     ],
                     "people": [
-                        32914
+                        33581
                     ]
                 }
             },
             {
-                "id": 8954641,
-                "name": "Quality Assurance",
-                "purpose": null,
+                "id": 8409472,
+                "name": "Lead Link",
+                "purpose": "Setting and running Hackathon",
                 "organization_id": 3595,
                 "links": {
-                    "circle": 19837,
+                    "circle": 14868,
                     "supporting_circle": null,
-                    "domains": [],
-                    "accountabilities": [],
+                    "domains": [
+                        8609878
+                    ],
+                    "accountabilities": [
+                        9079549,
+                        9079550,
+                        9079551,
+                        9079552,
+                        9079553,
+                        9079554
+                    ],
+                    "people": [
+                        33418
+                    ]
+                }
+            },
+            {
+                "id": 9526397,
+                "name": "Prizes",
+                "purpose": "prizes for Hackathon",
+                "organization_id": 3595,
+                "links": {
+                    "circle": 14868,
+                    "supporting_circle": null,
+                    "domains": [
+                        9862129
+                    ],
+                    "accountabilities": [
+                        10563884
+                    ],
+                    "people": [
+                        33534
+                    ]
+                }
+            },
+            {
+                "id": 9526395,
+                "name": "Registration & Voting Infrastructure",
+                "purpose": "registration and voting for Hackathon",
+                "organization_id": 3595,
+                "links": {
+                    "circle": 14868,
+                    "supporting_circle": null,
+                    "domains": [
+                        9862125
+                    ],
+                    "accountabilities": [
+                        10563880
+                    ],
                     "people": [
                         33585
                     ]
                 }
             },
             {
-                "id": 8883044,
+                "id": 8409476,
                 "name": "Rep Link",
                 "purpose": "Within the Super-Circle, the Rep Link holds the Purpose of the Sub-Circle; within the Sub-Circle, the Rep Link’s Purpose is: Tensions relevant to process in the Super-Circle channeled out and resolved.",
-                "elected_until": "2017-07-24",
+                "elected_until": "2017-12-14",
                 "organization_id": 3595,
                 "links": {
-                    "circle": 19837,
+                    "circle": 14868,
                     "supporting_circle": null,
                     "domains": [],
                     "accountabilities": [
-                        9710007,
-                        9710008,
-                        9710009
+                        9079560,
+                        9079561,
+                        9079562
                     ],
                     "people": [
-                        33579
+                        33585
                     ]
                 }
             },
             {
-                "id": 8883041,
-                "name": "Secretary",
-                "purpose": "Steward and stabilize the Circle’s formal records and record-keeping process.",
-                "elected_until": "2018-01-22",
+                "id": 9526386,
+                "name": "Rules Coordinator",
+                "purpose": "Rules for Hackathon",
                 "organization_id": 3595,
                 "links": {
-                    "circle": 19837,
+                    "circle": 14868,
                     "supporting_circle": null,
                     "domains": [
-                        9140628
+                        9862112
                     ],
                     "accountabilities": [
-                        9710002,
-                        9710003,
-                        9710004
+                        10563867
                     ],
                     "people": [
-                        32914
+                        32330
                     ]
                 }
             },
             {
-                "id": 8954642,
-                "name": "Software Engineer",
-                "purpose": null,
+                "id": 8409473,
+                "name": "Secretary",
+                "purpose": "Steward and stabilize the Circle’s formal records and record-keeping process.",
+                "elected_until": "2017-12-14",
                 "organization_id": 3595,
                 "links": {
-                    "circle": 19837,
+                    "circle": 14868,
                     "supporting_circle": null,
-                    "domains": [],
-                    "accountabilities": [],
+                    "domains": [
+                        8609879
+                    ],
+                    "accountabilities": [
+                        9079555,
+                        9079556,
+                        9079557
+                    ],
                     "people": [
-                        32914,
-                        33579,
-                        33582
+                        33585
                     ]
                 }
             }
         ],
-        "policies": [],
+        "policies": [
+            {
+                "id": 8589531,
+                "title": "Metric: Maintain or increase user participation in Hackathon",
+                "body": "Maintain or increase the number of participants in Hackathon.",
+                "links": {
+                    "role_id": null,
+                    "circle_id": 14868,
+                    "domain": null
+                }
+            },
+            {
+                "id": 8199799,
+                "title": "Metric: Net Promoter Score",
+                "body": "Group to maintain NPS after each Hackathon Event.",
+                "links": {
+                    "role_id": null,
+                    "circle_id": 14868,
+                    "domain": null
+                }
+            }
+        ],
         "domains": [
             {
-                "id": 9147334,
-                "description": "Project Analysis"
+                "id": 8609861,
+                "description": "Collecting feedback from participants"
             },
             {
-                "id": 9147335,
-                "description": "Project Architecture"
+                "id": 8609858,
+                "description": "Hackathon"
             },
             {
-                "id": 9147336,
-                "description": "Project Code Repository"
+                "id": 8609860,
+                "description": "Running Hackathon"
             },
             {
-                "id": 9147337,
-                "description": "Project Design"
-            },
-            {
-                "id": 9147338,
-                "description": "Project Plan"
-            },
-            {
-                "id": 9147339,
-                "description": "Project Requisition (Purchase Order)"
-            },
-            {
-                "id": 9147340,
-                "description": "Project Training Materials"
+                "id": 8609859,
+                "description": "Setting Hackathon"
             }
         ],
         "supported_roles": [
             {
-                "id": 8876805,
-                "name": "CD Part II",
-                "purpose": "Improving cont. delivery security scanning, implementing side by side deployment and implement the solution",
+                "id": 8409457,
+                "name": "Hackathon Event",
+                "purpose": "Setting and running Hackathon",
                 "organization_id": 3595,
                 "links": {
-                    "circle": 10383,
-                    "supporting_circle": 19837,
+                    "circle": 14560,
+                    "supporting_circle": 14868,
                     "domains": [
-                        9147334,
-                        9147335,
-                        9147336,
-                        9147337,
-                        9147338,
-                        9147339,
-                        9147340
+                        8609861,
+                        8609858,
+                        8609860,
+                        8609859
                     ],
-                    "accountabilities": [
-                        9718045,
-                        9718046,
-                        9718047,
-                        9718048,
-                        9718049,
-                        9718060,
-                        9718061,
-                        9718062,
-                        9718063,
-                        9718064,
-                        9718065,
-                        9718066
-                    ],
+                    "accountabilities": [],
                     "people": [
-                        32914
+                        33418
                     ]
                 }
             }
