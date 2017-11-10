@@ -1,5 +1,3 @@
-// not working
-
 import DataLoader from 'dataloader'
 import { fetchRoles } from '../fetch-functions/roles';
 
