@@ -12,5 +12,5 @@ import { fetchCircles }  from '../../fetch-functions/circles';
 export default {
     type: new GraphQLList(circlesType),
 
-    resolve: async (root) =>  fetchCircles()
+    resolve: async (root) =>  Promise.resolve(fetchCircles())
 }

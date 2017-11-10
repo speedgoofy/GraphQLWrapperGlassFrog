@@ -9,9 +9,8 @@ import {
 import { peopleType } from './people'
 import { roleType } from './role'
 
-import { fetchRoles } from '../fetch-functions/roles';
-
 import { peopleLoader } from '../data-loaders/peopleLoader';
+import { rolesLoader } from '../data-loaders/rolesLoader';
 
 export const circlesType = new GraphQLObjectType({
     name: 'Circles',
@@ -48,8 +47,8 @@ export const circlesType = new GraphQLObjectType({
         roles: {
             type: new GraphQLList(roleType),
             resolve: async json => {
-                const id = json.id
-                return Promise.resolve(fetchRoles(id))
+                const ids = json.id
+                return rolesLoader.load(ids)
             }
         },
     })
