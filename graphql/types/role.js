@@ -53,39 +53,27 @@ export const roleType = new GraphQLObjectType({
         return domainLoader.load(circleId)
           .then(data => {
             const domainList = data.linked.domains
-
             var domainsForRole = domainList.filter(function (el) {
               return ~domainIds.indexOf(el.id)
             })
-
             return domainsForRole
-          }
-          )
+          })
       }
     },
-    accountabilities : {
-        type: new GraphQLList(accountabilitiesType),
-        resolve: json => {
-          const circleId = json.links.circle
-          const accountabilityIds = json.links.accountabilities
-
-          return accountabilitiesLoader.load(circleId)
+    accountabilities: {
+      type: new GraphQLList(accountabilitiesType),
+      resolve: json => {
+        const circleId = json.links.circle
+        const accountabilityIds = json.links.accountabilities
+        return accountabilitiesLoader.load(circleId)
           .then(data => {
             const accountabilitiesList = data.linked.accountabilities
-
             var accountabilitiesForRole = accountabilitiesList.filter(function (el) {
               return ~accountabilityIds.indexOf(el.id)
             })
-
             return accountabilitiesForRole
-          }
-          )
-
-
-
-
-
-        }
+          })
+      }
     },
     people: {
       type: new GraphQLList(peopleType),
