@@ -9,7 +9,7 @@ import {
 
 export const domainType = new GraphQLObjectType({
     name: 'Domain',
-    description: '...',
+    description: 'Get a list of domains for a circle or a role',
 
     fields: () => ({
         id: {

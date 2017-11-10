@@ -9,7 +9,7 @@ import {
 
 export const policyType = new GraphQLObjectType({
     name: 'policy',
-    description: '...',
+    description: 'get policies',
 
     fields: () => ({
         id: {

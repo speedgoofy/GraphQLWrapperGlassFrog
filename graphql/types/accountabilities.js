@@ -9,7 +9,7 @@ import {
 
 export const AccountabilitiesType = new GraphQLObjectType({
     name: 'Accountabilities',
-    description: '...',
+    description: 'Get the Accountabilities of a role',
 
     fields: () => ({
         id: {

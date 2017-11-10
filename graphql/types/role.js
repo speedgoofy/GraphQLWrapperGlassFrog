@@ -7,10 +7,10 @@ import {
 import { domainType } from './domain';
 import { accountabilitiesType } from './accountabilities';
 import { peopleType } from './people';
-import { fetchPeople } from '../fetch-functions/people';
+
 import { fetchDomains } from '../fetch-functions/domains';
 
-//const fetch = require('node-fetch');
+import { peopleLoader } from '../data-loaders/peopleLoader';
 
 
 export const roleType = new GraphQLObjectType({
@@ -50,8 +50,6 @@ export const roleType = new GraphQLObjectType({
             resolve: json => {
                 const circleid = json.links.circle
                 const domainIds = json.links.domains
-                //console.log(circleid)
-
                 return Promise.resolve(fetchDomains(circleid, domainIds))
             }
         },
@@ -63,8 +61,8 @@ export const roleType = new GraphQLObjectType({
             type: new GraphQLList(peopleType),
             resolve: async json => {
                 const ids = json.links.people
-                return Promise.all(ids.map(fetchPeople)
-            )}
+                return peopleLoader.loadMany(ids)
+            }
         }
     })
 })

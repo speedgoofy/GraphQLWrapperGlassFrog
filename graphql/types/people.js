@@ -9,7 +9,7 @@ import {
 
 export const peopleType = new GraphQLObjectType({
     name: 'People',
-    description: '...',
+    description: 'Get a list of people',
 
     fields: () => ({
         id: {

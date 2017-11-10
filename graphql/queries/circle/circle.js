@@ -16,5 +16,5 @@ export default {
     args: {
         circleID: { type: GraphQLInt }
     },
-    resolve: (root, args) => fetchCircle(args.circleID)
+    resolve: (root, args) => Promise.resolve(fetchCircle(args.circleID))
 }
