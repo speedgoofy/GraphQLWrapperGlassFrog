@@ -7,10 +7,9 @@ import {
 } from 'graphql'
 
 import { circlesType } from '../../types/circles';
-import { fetchCircles }  from '../../fetch-functions/circles';
+import { circlesLoader } from '../../data-loaders/circlesLoader'
 
 export default {
   type: new GraphQLList(circlesType),
-
-  resolve: async (root) => Promise.resolve(fetchCircles())
+  resolve: async (root) => circlesLoader.load([])
 }
