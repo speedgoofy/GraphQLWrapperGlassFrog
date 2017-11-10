@@ -7,7 +7,7 @@ import {
 } from'graphql'
 
 
-export const AccountabilitiesType = new GraphQLObjectType({
+export const accountabilitiesType = new GraphQLObjectType({
   name: 'Accountabilities',
   description: 'Get the Accountabilities of a role',
 

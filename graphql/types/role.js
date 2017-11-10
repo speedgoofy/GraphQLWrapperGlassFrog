@@ -10,6 +10,7 @@ import { peopleType } from './people';
 
 import { peopleLoader } from '../data-loaders/peopleLoader';
 import { domainLoader } from '../data-loaders/domainLoader';
+import { accountabilitiesLoader } from '../data-loaders/accountabilitiesLoader';
 
 export const roleType = new GraphQLObjectType({
   name: 'Role',
@@ -62,10 +63,30 @@ export const roleType = new GraphQLObjectType({
           )
       }
     },
-    // accountabilities : {
-    //     type: new GraphQLList(accountabilitiesType),
-    //     resolve: json => json.domains
-    // },
+    accountabilities : {
+        type: new GraphQLList(accountabilitiesType),
+        resolve: json => {
+          const circleId = json.links.circle
+          const accountabilityIds = json.links.accountabilities
+
+          return accountabilitiesLoader.load(circleId)
+          .then(data => {
+            const accountabilitiesList = data.linked.accountabilities
+
+            var accountabilitiesForRole = accountabilitiesList.filter(function (el) {
+              return ~accountabilityIds.indexOf(el.id)
+            })
+
+            return accountabilitiesForRole
+          }
+          )
+
+
+
+
+
+        }
+    },
     people: {
       type: new GraphQLList(peopleType),
       resolve: async json => {
