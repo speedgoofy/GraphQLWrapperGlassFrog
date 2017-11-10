@@ -9,12 +9,14 @@ import {
 } from 'graphql'
 
 import { circleType } from '../../types/circle';
-import { fetchCircle }  from '../../fetch-functions/circle';
+//import { fetchCircle }  from '../../fetch-functions/circle';
+import { circleLoader } from '../../data-loaders/circleLoader'
 
 export default {
   type: circleType,
   args: {
     circleID: { type: GraphQLInt }
   },
-  resolve: (root, args) => Promise.resolve(fetchCircle(args.circleID))
+  //resolve: (root, args) => Promise.resolve(fetchCircle(args.circleID))
+  resolve: (root, args) => circleLoader.load(args.circleID)
 }
