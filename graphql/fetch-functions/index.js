@@ -5,9 +5,9 @@ import fetchCircles from './circles';
 import fetchRoles from './roles';
 
 export default {
-    ...fetchCircle,
-    ...fetchCircles,
-    ...fetchRoles,
-    ...ApiKey
+  ...fetchCircle,
+  ...fetchCircles,
+  ...fetchRoles,
+  ...ApiKey
 
 }

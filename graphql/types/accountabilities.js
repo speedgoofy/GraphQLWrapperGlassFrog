@@ -8,17 +8,17 @@ import {
 
 
 export const AccountabilitiesType = new GraphQLObjectType({
-    name: 'Accountabilities',
-    description: 'Get the Accountabilities of a role',
+  name: 'Accountabilities',
+  description: 'Get the Accountabilities of a role',
 
-    fields: () => ({
-        id: {
-            type: GraphQLString,
-            resolve: json => json.id
-        },
-        description: {
-            type: GraphQLString,
-            resolve: json => json.description
-        }
-    })
+  fields: () => ({
+    id: {
+      type: GraphQLString,
+      resolve: json => json.id
+    },
+    description: {
+      type: GraphQLString,
+      resolve: json => json.description
+    }
+  })
 })

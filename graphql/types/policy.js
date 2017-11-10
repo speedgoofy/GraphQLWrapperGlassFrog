@@ -8,24 +8,24 @@ import {
 
 
 export const policyType = new GraphQLObjectType({
-    name: 'policy',
-    description: 'get policies',
+  name: 'policy',
+  description: 'get policies',
 
-    fields: () => ({
-        id: {
-            type: GraphQLString,
-            resolve: json => {
-            //console.log(json)
-             return json.id
-            }
-        },
-        title: {
-            type: GraphQLString,
-            resolve: json => json.title
-        },
-        body: {
-            type: GraphQLString,
-            resolve: json => json.body
-        }
-    })
+  fields: () => ({
+    id: {
+      type: GraphQLString,
+      resolve: json => {
+        //console.log(json)
+        return json.id
+      }
+    },
+    title: {
+      type: GraphQLString,
+      resolve: json => json.title
+    },
+    body: {
+      type: GraphQLString,
+      resolve: json => json.body
+    }
+  })
 })
