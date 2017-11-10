@@ -8,10 +8,8 @@ import { domainType } from './domain';
 import { accountabilitiesType } from './accountabilities';
 import { peopleType } from './people';
 
-import { fetchDomains } from '../fetch-functions/domains';
-
 import { peopleLoader } from '../data-loaders/peopleLoader';
-
+import { domainLoader } from '../data-loaders/domainLoader';
 
 export const roleType = new GraphQLObjectType({
     name: 'Role',
@@ -48,9 +46,20 @@ export const roleType = new GraphQLObjectType({
         domains : {
             type: new GraphQLList(domainType),
             resolve: json => {
-                const circleid = json.links.circle
+                const circleId = json.links.circle
                 const domainIds = json.links.domains
-                return Promise.resolve(fetchDomains(circleid, domainIds))
+
+                return domainLoader.load(circleId)
+                .then( data => {
+                    const domainList = data.linked.domains
+                    
+                    var domainsForRole = domainList.filter(function(el){
+                        return ~domainIds.indexOf(el.id)
+                    })
+
+                    return domainsForRole
+                }
+            )
             }
         },
         // accountabilities : {
