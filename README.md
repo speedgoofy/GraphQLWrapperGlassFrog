@@ -1,6 +1,8 @@
 # GraphQL Wrapper for GlassFrog
 
-GraphQL wrapper for the GlassFrog API
+A GraphQL wrapper for the GlassFrog API
+
+We’re making it easier to query the GlassFrog API using [GraphQL]( http://graphql.org/)!
 
 ## Getting Started
 
@@ -65,5 +67,10 @@ query{
     }
 }
 ```
+
+### GraphQL!
+
+Learn more about GraphQL at --> http://graphql.org/
+
 
 
