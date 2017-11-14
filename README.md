@@ -35,7 +35,7 @@ Add your GlassFrog Api key
 
 1. Navigate to https://app.glassfrog.com/api_keys and create a new Api key ( Name the key anything you like )
 2. Open the GraphQlWrapperGlassFrog in your editor
-3. Under the "fetch-functions" folder,  add a new file "ApiKey.js"
+3. In the "data-loaders" folder,  add a new file "ApiKey.js"
 4. Export your ApiKey
 
 ```javascript
