@@ -58,7 +58,7 @@ typings/
 .env
 
 # glassfrog api key
-graphql/fetch-functions/ApiKey.js
+graphql/data-loaders/ApiKey.js
 
 # dont check in test-responses
 test-responses/
