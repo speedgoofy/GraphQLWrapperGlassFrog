@@ -49,7 +49,7 @@ npm start
 ```
 
 ```
-http://localhost:3000/graphql
+http://localhost:8080/graphql
 ```
 
 ### Make a query!
