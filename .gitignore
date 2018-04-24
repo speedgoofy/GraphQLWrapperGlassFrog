@@ -58,8 +58,10 @@ typings/
 .env
 
 # glassfrog api key
-graphql/data-loaders/ApiKey.js
+lib/graphql/data-loaders/ApiKey.js
 
 # dont check in test-responses
 test-responses/
 
+# dont check in dist folder
+dist
